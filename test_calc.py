@@ -52,6 +52,5 @@ def test_logic_negative():
     difference = duration(start_date, end_date)
     # check the resulting answer
     assert difference == 6
-    
 
     
