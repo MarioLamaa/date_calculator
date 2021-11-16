@@ -47,7 +47,7 @@ def test_zero_duration():
     # initialise user inputs for a choice of two different dates
     start_date = datetime.datetime(2021,11,16)
     end_date = datetime.datetime(2021,11,16)
-    # calculate the difference in days between the two dates
+    # calculate the difference when the day is the same
     difference = duration(start_date, end_date)
     # check the resulting answer
     assert difference == 0
@@ -60,5 +60,5 @@ def test_duration_negative():
     difference = duration(start_date, end_date)
     # check the resulting answer
     assert difference == 6
-
     
+
