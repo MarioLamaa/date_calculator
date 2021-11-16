@@ -1,12 +1,11 @@
 '''
-This programme tests the date calculator
-
-Types of tests:
-Logic of the calculation
-Is the data type we expect
-Boundaries for inputs
+This programme tests the date calculator to ensure that the backend calculations for the web application provide the answers expected.
 
 '''
+
+
+# Imports relevant function to format date inputs and calculations from back-end programme 
+
 import datetime
 from datecalc import duration, when
 
@@ -44,7 +43,16 @@ def test_zero_when():
     # check the resulting date hasn't changed
     assert answer == datetime.datetime(2021,11,20)
     
-def test_logic_negative():
+def test_zero_duration():
+    # initialise user inputs for a choice of two different dates
+    start_date = datetime.datetime(2021,11,16)
+    end_date = datetime.datetime(2021,11,16)
+    # calculate the difference in days between the two dates
+    difference = duration(start_date, end_date)
+    # check the resulting answer
+    assert difference == 0
+    
+def test_duration_negative():
     # initialise user inputs for a choice of two different dates
     start_date = datetime.datetime(2021,11,15)
     end_date = datetime.datetime(2021,11,9)
